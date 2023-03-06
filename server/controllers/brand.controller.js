@@ -1,11 +1,14 @@
+const { Brand } = require("../models/models");
+
 class BrandController {
 	async create(req, res) {
-		try {
-		} catch (e) {}
+		const { name } = req.body;
+		const brand = await Brand.create({ name });
+		return res.json(brand);
 	}
 	async getAll(req, res) {
-		try {
-		} catch (e) {}
+		const brands = await Brand.findAll();
+		return res.json(brands);
 	}
 }
 
