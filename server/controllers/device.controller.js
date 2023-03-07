@@ -2,6 +2,7 @@ const uuid = require("uuid");
 const path = require("path");
 const { Device, DeviceInfo } = require("../models/models");
 const ApiError = require("../error/ApiError");
+const fs = require("fs");
 
 class DeviceController {
 	async create(req, res, next) {
@@ -71,6 +72,19 @@ class DeviceController {
 			where: { id },
 			include: [{ model: DeviceInfo, as: "info" }],
 		});
+		return res.json(device);
+	}
+
+	async delete(req, res) {
+		const { id } = req.params;
+
+		const device = await Device.findOne({ where: { id } });
+		device.destroy();
+
+		await DeviceInfo.destroy({ where: { deviceId: id } });
+
+		fs.unlinkSync(path.resolve(__dirname, "..", "static", device.img));
+
 		return res.json(device);
 	}
 }
