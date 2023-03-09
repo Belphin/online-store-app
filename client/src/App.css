@@ -13,3 +13,7 @@
 	display: flex;
 	justify-content: space-between;
 }
+#DeviceCard {
+	width: 150px;
+	cursor: pointer;
+}
