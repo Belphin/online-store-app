@@ -1,0 +1,15 @@
+#NavBar_BrandNavLink {
+	color: white;
+	text-decoration: none;
+}
+
+#AuthForm {
+	height: 80vh;
+}
+#AuthCard {
+	width: 600px;
+}
+#AuthForm_Options {
+	display: flex;
+	justify-content: space-between;
+}
