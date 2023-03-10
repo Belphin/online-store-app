@@ -44,7 +44,7 @@ const Auth = () => {
 									Have an account? <NavLink to={LOGIN_ROUTE}>Log in</NavLink>
 								</div>
 							)}
-							<label>
+							<label style={{ whiteSpace: "nowrap" }}>
 								Show password
 								<input
 									className="m-1"

@@ -14,10 +14,10 @@ const DevicePage = () => {
 	return (
 		<Container className="mt-3">
 			<Row>
-				<Col md={4} className="d-flex justify-content-center">
+				<Col md={6} className="d-flex justify-content-center">
 					<Image width={300} height={300} src={device.img} />
 				</Col>
-				<Col md={4} className="d-flex justify-content-center">
+				<Col md={6} className="d-flex justify-content-center">
 					<Row className="d-flex flex-column align-items-center">
 						<h2>{device.name}</h2>
 						<div
@@ -33,14 +33,14 @@ const DevicePage = () => {
 						</div>
 					</Row>
 				</Col>
-				<Col md={4} className="d-flex justify-content-center">
-					<Card
-						id="DevicePriceCard"
-						className="d-flex flex-column align-items-center justify-content-around">
-						<h3>from: {device.price} UAH</h3>
-						<Button variant={"outline-dark"}>Add to cart</Button>
-					</Card>
-				</Col>
+			</Row>
+			<Row className="d-flex justify-content-center">
+				<Card
+					id="DevicePriceCard"
+					className="d-flex flex-column align-items-center justify-content-around h-100 p-3 m-4">
+					<h3>from: {device.price} UAH</h3>
+					<Button variant={"outline-success"}>Add to cart</Button>
+				</Card>
 			</Row>
 			<Row className="d-flex flex-column m-3">
 				<h1>Characteristics</h1>
