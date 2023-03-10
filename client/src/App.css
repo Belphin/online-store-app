@@ -17,3 +17,9 @@
 	width: 150px;
 	cursor: pointer;
 }
+#DevicePriceCard {
+	width: 300px;
+	height: 300px;
+	font-size: 32;
+	border: 5px solid lightgray;
+}
